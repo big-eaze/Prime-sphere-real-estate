@@ -19,11 +19,11 @@ const MobileNav = () => {
       <div className="relative lg:hidden flex items-center justify-center w-full py-4">
         <button
           onClick={() => setOpen(true)}
-          className="p-2 text-gray-800 absolute left-3 top-2 focus:outline-none"
+          className="p-2 text-gray-800 absolute left-3 top-4 focus:outline-none"
         >
           <Menu size={28} />
         </button>
-        <h1 className="text-xl">Prime Sphere</h1>
+        <h1 className="text-3xl" style={{ fontFamily: "var(--font-dancing)" }}>Prime Sphere</h1>
       </div>
 
       {/* Overlay */}

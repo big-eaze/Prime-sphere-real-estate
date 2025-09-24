@@ -54,7 +54,7 @@ export default async function About() {
         <section className="w-full h-[400px] md:h-[600px] bg-bottom bg-cover bg-top" style={{ backgroundImage: "url('/group.png')" }}>
           <div className="w-full h-full flex flex-col gap-6 items-center justify-center bg-black/40">
             <span className="text-base md:text-lg text-white">Get To Know Our Talented Team.</span>
-            <h1 className="font-sans text-3xl md:text-6xl text-white text-center">About Prime Sphere Real Estate</h1>
+            <h1 className="text-3xl md:text-6xl text-white text-center">About Prime Sphere Real Estate</h1>
           </div>
         </section>
 

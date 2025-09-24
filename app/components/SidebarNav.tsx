@@ -57,7 +57,7 @@ export default function SidebarNav() {
               <Link
                 key={item.name}
                 href={item.path}
-                className={`block text-lg font-sans ${pathname === item.path ? "text-red-700 font-medium" : "text-gray-800"
+                className={`block text-lg ${pathname === item.path ? "text-red-700 font-medium" : "text-gray-800"
                   } hover:text-red-700 transition-colors`}
               >
                 {item.name}

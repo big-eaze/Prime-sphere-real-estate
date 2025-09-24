@@ -16,7 +16,7 @@ function GetInTouch() {
       </div>
 
       {/* Right Form */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-10 font-sans">
+      <div className="w-full lg:w-1/2 flex flex-col gap-10">
         <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
           <h1>In need of support?</h1>
           <p className="mt-2 text-gray-700">Get in touch!</p>

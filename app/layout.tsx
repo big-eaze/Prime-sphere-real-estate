@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
+import { Geist, Geist_Mono, Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 import SidebarNav from "./components/SidebarNav";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import MobileNav from "./components/MobileNav";
 
 
 const dancing = Dancing_Script({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-Dancing_Script"
+  variable: "--font-dancing",
+  display: "swap", // makes it more reliable
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap", // makes it more reliable
 })
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dancing.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dancing.variable}  ${poppins.variable} antialiased`}
       >
         <MobileNav />
         <SidebarNav />

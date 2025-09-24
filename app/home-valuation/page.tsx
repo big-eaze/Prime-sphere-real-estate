@@ -16,7 +16,7 @@ export default function ValuationPage() {
 
         {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full px-6 text-center">
-          <h1 className="text-white font-sans text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             Do you want to know <br />
             what your property is worth?
           </h1>

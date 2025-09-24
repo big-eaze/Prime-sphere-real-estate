@@ -16,7 +16,7 @@ export default async function ContactPage() {
       <div className="lg:ml-75">
         <section className="w-full h-[500px] bg-bottom" style={{ backgroundImage: "url('/landscape-3.jpg')" }}>
           <div className="w-full text-white  h-full bg-overlay flex flex-col gap-4 lg:gap-7 items-center justify-center">
-            <h1 className="font-sans text-5xl lg:text-6xl p-2 text-center">How to contact me </h1>
+            <h1 className=" text-5xl lg:text-6xl p-2 text-center">How to contact me </h1>
             <span className="text-lg p-2">call or send an email through our form.</span>
           </div>
         </section>

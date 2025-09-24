@@ -84,7 +84,7 @@ function PropertyTopSearch() {
       >
         <div className="w-full h-full bg-black/50 text-white flex flex-col gap-14 items-center justify-center">
           <div className="text-center">
-            <h1 className="font-sans text-5xl sm:text-6xl font-bold">
+            <h1 className="text-5xl sm:text-6xl font-bold">
               Top Real Estate
             </h1>
             <span className="text-3xl sm:text-5xl">Listings in San Diego</span>
