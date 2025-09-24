@@ -54,10 +54,12 @@ export default function TestimonialSlider() {
           autoPlay
           loop
           playsInline
+          preload="auto"
+          poster="/luxury2.jpg"
           muted
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source type="video/mp4" src="/living.mp4" />
+          <source type="video/mp4" src="/living-mobile.mp4" />
         </video>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />

@@ -15,10 +15,10 @@ export default function Testimonial() {
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src="/home/home2.jpg"
+            src="/testimonial.jpg"
             alt="Video Thumbnail"
             fill
-            className="object-cover rounded-lg shadow-lg"
+            className="object-cover object-top shadow-lg"
           />
           {/* Play Button Overlay */}
           <div className="absolute inset-0 flex justify-center items-center bg-black/30 group-hover:bg-black/50 transition">

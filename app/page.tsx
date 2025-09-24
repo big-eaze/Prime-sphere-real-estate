@@ -18,12 +18,15 @@ export default async function HomePage() {
           <video
             autoPlay
             muted
-            loop
             playsInline
+            loop
+            preload="auto"
+            poster="/luxury.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/homevid.mp4" type="video/mp4" />
+            <source src="/homevid-mobile.mp4" type="video/mp4" />
           </video>
+
 
           {/* Overlay */}
           <div className="relative z-10 text-white flex flex-col gap-6 items-center justify-center h-full bg-black/50 px-4">

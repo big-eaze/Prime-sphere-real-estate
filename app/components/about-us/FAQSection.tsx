@@ -46,7 +46,7 @@ export default function FAQSection() {
   return (
     <section className="relative bg-white py-20 md:py-40">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
           Frequently Asked Questions
         </h2>
 
@@ -54,17 +54,15 @@ export default function FAQSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="bg-white rounded-md shadow-sm border border-black p-10"
+              className="bg-white rounded-md shadow-sm border border-black p-6 sm:p-8 md:p-10"
             >
               <button
-                className="w-full flex justify-between items-center text-left font-semibold text-xl "
-                onClick={() =>
-                  setOpenIndex(openIndex === i ? null : i)
-                }
+                className="w-full flex justify-between items-center text-left font-semibold text-lg sm:text-xl"
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
                 {faq.question}
                 <ChevronDown
-                  className={`ml-2 h-5 w-5 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""
+                  className={`ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""
                     }`}
                 />
               </button>
@@ -74,12 +72,13 @@ export default function FAQSection() {
                 className={`overflow-hidden transition-all duration-300 ${openIndex === i ? "max-h-96 mt-3" : "max-h-0"
                   }`}
               >
-                <p className="text-gray-600">{faq.answer}</p>
+                <p className="text-sm sm:text-base text-gray-600">{faq.answer}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
+
   );
 }
