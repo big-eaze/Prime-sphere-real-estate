@@ -7,9 +7,9 @@ export default function Testimonial() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full min-h-[560px] sm:min-h-[650px]">
+    <div className="flex flex-col sm:flex-row lg:flex-row w-full min-h-[560px] sm:min-h-[650px]">
       {/* Thumbnail Section */}
-      <div className="w-full lg:w-1/2 h-82 sm:h-96 lg:h-auto flex justify-center items-center">
+      <div className="w-full lg:w-1/2 h-82 sm:h-auto  flex justify-center items-center">
         <div
           className="relative w-full h-full cursor-pointer group"
           onClick={() => setIsOpen(true)}

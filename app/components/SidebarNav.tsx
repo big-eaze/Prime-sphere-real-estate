@@ -19,7 +19,8 @@ export default function SidebarNav() {
 
   type Nav = {
     name: string,
-    path: string
+    path?: string | null,
+    subordinate?: Nav[]
   }
 
 
@@ -28,7 +29,7 @@ export default function SidebarNav() {
       { name: "Home", path: "/" },
       { name: "Properties", path: "/property-search" },
       { name: "About", path: "/about-us" },
-      { name: "Blog", path: "/blog-list" },
+      { name: "Blog", path: "/", subordinate: [{ name: "Blog single post", path: "/blog-single" }, { name: "Blog List", path: "/blog-list" }] },
       { name: "Contact", path: "/contact" },
     ]
   )
@@ -48,22 +49,68 @@ export default function SidebarNav() {
               height={200}
               className="w-30 h-30 rounded-md object-cover object-top"
             />
-            <h2 className="mt-4 text-lg font-dancing">Sam Daniels</h2>
+            <h2 className="mt-4 text-lg font-dancing">John Doe Ski</h2>
           </div>
 
           {/* Navigation */}
           <nav className="mt-10 text-center space-y-6">
-            {mounted && navTitle.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                className={`block text-lg ${pathname === item.path ? "text-red-700 font-medium" : "text-gray-800"
-                  } hover:text-red-700 transition-colors`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {mounted &&
+              navTitle.map((item) => {
+                // Determine if this item or any of its subordinates matches current path
+                const isActive =
+                  pathname === item.path ||
+                  item.subordinate?.some((sub) => sub.path === pathname);
+
+                return (
+                  <div key={item.name} className="relative group">
+                    {/* Main Nav Item */}
+                    {item.subordinate ? (
+                      <span
+                        className={`block text-lg cursor-pointer relative ${isActive ? "text-red-700 font-medium" : "text-gray-800"
+                          } hover:text-red-700 transition-colors`}
+                      >
+                        {item.name}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.path || "#"}
+                        className={`block text-lg relative ${isActive ? "text-red-700 font-medium" : "text-gray-800"
+                          } hover:text-red-700 transition-colors`}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+
+                    {/* Tooltip Submenu */}
+                    {item.subordinate && (
+                      <div
+                        className="absolute left-full top-1/2 -translate-y-1/2 ml-1 px-4 hidden group-hover:flex flex-col bg-white border border-gray-200 shadow-md p-2 w-40 text-left transition-all duration-200"
+                      >
+                        {item.subordinate.map((sub, idx) => (
+                          <Link
+                            key={idx}
+                            href={sub.path || "#"}
+                            className={`text-sm py-2 hover:bg-gray-50 ${pathname === sub.path
+                                ? "text-red-700 font-medium"
+                                : "text-gray-700 hover:text-red-700"
+                              }`}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+
+                        {/* Tooltip Arrow */}
+                        <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-y-8 border-y-transparent border-r-8 border-r-white drop-shadow-md"></div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
           </nav>
+
+
+
+
         </div>
 
         {/* Bottom Section */}

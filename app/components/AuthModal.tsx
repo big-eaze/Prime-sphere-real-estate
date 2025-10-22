@@ -22,7 +22,7 @@ export default function AuthModal({ setAddToFav }: AuthModalProps) {
           />
           <div className="absolute inset-0 bg-black/40 flex items-end justify-center pb-5">
             <h2 className="text-white text-3xl flex-wrap font-semibold text-center px-6">
-              Welcome to San<br /> Diego Real Estate
+              Welcome to Prime<br /> Sphere Real Estate
             </h2>
           </div>
         </div>

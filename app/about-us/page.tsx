@@ -99,15 +99,15 @@ export default async function About() {
 
         {/* About Daniels Realty */}
         <section className="w-full max-w-5xl mx-auto bg-white py-16 md:py-24 flex flex-col gap-12 px-4 md:px-0">
-          <h1 className="text-center text-3xl md:text-4xl font-bold">About Daniels Realty</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h1 className="text-center text-3xl md:text-4xl font-bold">About Prime Sphere</h1>
+          <div className="ml-4 px-2 grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { title: "Our Mission", content: "With over $2 Billion in sales, our agency is the industry&apos;s top luxury producer with over 27 years of experience in marketing Seattle&apos;s most prestigious waterfront properties." },
               { title: "Our Vision", content: "Due to our unparalleled results, expertise and dedication, we rank amongst the Top 6 agencies in Seattle and our area. She also is an elite member to Corcoran&apos;s Presidents Council." },
               { title: "Our Values", content: "With her years of experience, impressive property portfolio, celebrity clientele, and unparalleled knowledge of the market and pedigree estates, Simone estimable business is sophisticated and renowned." },
               { title: "Our Resources", content: "With her years of experience, impressive property portfolio, celebrity clientele, and unparalleled knowledge of the market and pedigree estates, Simone estimable business is sophisticated and renowned." }
             ].map((item, idx) => (
-              <div key={idx} className="mb-6">
+              <div key={idx} className="mb-6 p-2">
                 <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
                 <p className="text-gray-700 text-base md:text-lg">{item.content}</p>
               </div>

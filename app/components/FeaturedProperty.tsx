@@ -57,12 +57,12 @@ export default function FeaturedProperties() {
       <h2 className="text-3xl font-bold text-center mb-8">Featured Properties</h2>
 
       {/* Tabs */}
-      <div className="flex  items-center lg:flex-row justify-center gap-3  mb-10">
+      <div className="flex  items-center lg:flex-row justify-center gap-0 sm:gap-3  mb-10">
         {(Object.keys(properties) as (keyof typeof properties)[]).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 
+            className={`relative px-2 sm:px-4 py-2 text-sm font-medium transition-colors duration-300 
               ${activeTab === tab
                 ? "text-black"
                 : "text-gray-500 hover:text-black"}

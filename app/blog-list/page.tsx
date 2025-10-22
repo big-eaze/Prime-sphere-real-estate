@@ -69,7 +69,7 @@ async function BlogList() {
         </section>
 
         {/* Breadcrumb */}
-        <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600">
+        <div className="max-w-6xl px-2 py-6 md:px-20 lg:mx-auto mx-4 text-sm text-gray-600">
           <Link href="/" className="hover:underline">
             Home
           </Link>{" "}
@@ -77,7 +77,7 @@ async function BlogList() {
         </div>
 
         {/* Blog List Section */}
-        <section className="max-w-6xl mx-auto px-4">
+        <section className="max-w-6xl md:mx-auto mx-4 px-2 md:px-20">
           <h2 className="text-2xl font-bold mb-6">Blog List</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

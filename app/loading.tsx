@@ -10,10 +10,6 @@ function loading() {
         <div className="absolute w-8 h-8 bg-gray-400 rounded-full bottom-0 right-0"></div>
       </div>
     </div>
-
-
-
-
   )
 }
 

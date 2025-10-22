@@ -7,18 +7,18 @@ import { FaSearch } from "react-icons/fa"
 
 function SearchFilter() {
   return (
-    <form className="flex flex-col lg:flex-row lg:items-center justify-center w-[70%] bg-white/40 lg:p-5 p-2 rounded-lg gap-2 lg:gap-5">
+    <form className="flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center justify-center w-[90%] lg:w-[70%] bg-white/40 p-3 lg:p-5 rounded-lg gap-3">
       {/* Categories */}
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <button className="bg-white text-gray-600 text-sm flex-none min-w-[230px] px-4 py-3 flex items-center justify-between rounded-md outline-none shadow-sm">
+          <button className="bg-white text-gray-600 text-sm flex-1 min-w-[220px] px-4 py-3 flex items-center justify-between rounded-md outline-none shadow-sm">
             Categories <ChevronDown className="text-gray-600 w-4 h-4" />
           </button>
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
           <DropdownMenu.Content
             sideOffset={5}
-            className="bg-white text-black min-w-[230px] max-h-60 overflow-y-auto p-2 mt-1 rounded-md shadow-md scrollbar-thin scrollbar-thumb-gray-300"
+            className="bg-white text-black min-w-[220px] max-h-60 overflow-y-auto p-2 mt-1 rounded-md shadow-md scrollbar-thin scrollbar-thumb-gray-300"
           >
             <div className="flex justify-between text-sm mb-2">
               <DropdownMenu.Item className="p-2 border border-gray-300 hover:bg-gray-100 transition cursor-pointer rounded">
@@ -54,14 +54,14 @@ function SearchFilter() {
       {/* Property Type */}
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <button className="bg-white text-gray-600 text-sm flex-none min-w-[230px] px-4 py-3 flex items-center justify-between rounded-md outline-none shadow-sm">
+          <button className="bg-white text-gray-600 text-sm flex-1 min-w-[220px] px-4 py-3 flex items-center justify-between rounded-md outline-none shadow-sm">
             Property Type <ChevronDown className="text-gray-600 w-4 h-4" />
           </button>
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
           <DropdownMenu.Content
             sideOffset={5}
-            className="bg-white text-black min-w-[230px] max-h-60 overflow-y-auto p-2 mt-1 rounded-md shadow-md scrollbar-thin scrollbar-thumb-gray-300"
+            className="bg-white text-black min-w-[220px] max-h-60 overflow-y-auto p-2 mt-1 rounded-md shadow-md scrollbar-thin scrollbar-thumb-gray-300"
           >
             <div className="flex justify-between text-sm mb-2">
               <DropdownMenu.Item className="p-2 border border-gray-300 hover:bg-gray-100 transition cursor-pointer rounded">
@@ -86,17 +86,18 @@ function SearchFilter() {
 
       {/* Search Input */}
       <input
-        className="w-full max-w-md flex-none p-3 bg-white text-black rounded-md outline-none placeholder-gray-600 px-5 shadow-sm"
+        className="w-full lg:flex-1 min-w-[220px] p-3 bg-white text-black rounded-md outline-none placeholder-gray-600 px-5 shadow-sm"
         placeholder="Enter an address, state, city, area or zip code"
         aria-label="Search properties"
       />
 
       {/* Search Button */}
-      <button className="bg-black text-white flex flex-none py-3 px-5 items-center justify-center gap-3 outline-none border border-black rounded-md hover:bg-gray-800 transition">
+      <button className="bg-black text-white w-full lg:w-auto flex items-center justify-center py-3 px-5 gap-3 outline-none border border-black rounded-md hover:bg-gray-800 transition">
         <FaSearch />
         Search Listings
       </button>
     </form>
+
   )
 }
 
